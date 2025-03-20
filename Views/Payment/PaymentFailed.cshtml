@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Thanh toán thất bại";
+}
+
+<div class="payment-failed-container">
+    <div class="payment-failed-box">
+        <h2 class="text-danger">Thanh toán thất bại</h2>
+        <p>Xin lỗi, đơn hàng của bạn không được xử lý thành công.</p>
+
+        <h4>Thông tin đơn hàng:</h4>
+        <p><strong>Mã giao dịch:</strong> @ViewBag.TxnRef</p>
+
+        <div class="button-group">
+            <a href="/" class="btn btn-primary">Quay lại trang chủ</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .payment-failed-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh; /* Chiếm 50% chiều cao màn hình */
+    }
+
+    .payment-failed-box {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .button-group {
+        margin-top: 20px;
+    }
+
+    .button-group .btn {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+</style>

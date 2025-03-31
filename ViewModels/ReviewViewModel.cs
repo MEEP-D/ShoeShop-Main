@@ -4,11 +4,11 @@ namespace ShoeShop.ViewModels
 {
 	public class ReviewViewModel
 	{
-		[Required(ErrorMessage = "ProductId is required")]
+		[Required(ErrorMessage = "ProductId là bắt buộc")]
 		public int ProductId { get; set; }
-		[Required(ErrorMessage = "Description is required")]
+		[Required(ErrorMessage = "Description là bắt buộc")]
 		public string Description { get; set; }
-		[Required(ErrorMessage = "Rating is required")]
+		[Required(ErrorMessage = "Rating là bắt buộc")]
 		public int Rating { get; set; }
 	}
 }

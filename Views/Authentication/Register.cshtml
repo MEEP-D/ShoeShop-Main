@@ -1,7 +1,7 @@
 ﻿@using ShoeShop.ViewModels.Authentication;
 @model RegisterViewModel;
 @{
-	ViewData["Title"] = "Register";
+	ViewData["Title"] = "Đăng ký";
 }
 
 @section Styles {
@@ -11,13 +11,13 @@
 <main class="bg_gray">
 	<div class="container margin_60">
 		<div class="page_header">
-			<h1 class="text-center">Create an Account</h1>
+			<h1 class="text-center">Tạo tài khoản</h1>
 		</div>
 		<!-- /page_header -->
 		<div class="row justify-content-center">
 			<div class="col-xl-6 col-lg-6 col-md-8">
 				<div class="box_account">
-					<h3 class="new_client">New Client</h3> <small class="float-right pt-2">* Required Fields</small>
+					<h3 class="new_client">Người dùng</h3> <small class="float-right pt-2"></small>
 					@if (TempData["Error"] != null)
 					{
 						<div class="col-md-12 alert alert-danger mt-3">
@@ -26,31 +26,31 @@
 					}
 					<form class="form_container" asp-action="Register">
 						<div class="form-group">
-							<label asp-for="FullName" class="form-label"></label>
-							<input asp-for="FullName" class="form-control mb-1" placeholder="Alex hgbaodev">
+							<label asp-for="FullName" class="form-label">Tên đầy đủ</label>
+							<input asp-for="FullName" class="form-control mb-1" placeholder="Họ và tên">
 							<span asp-validation-for="FullName" class="d-block text-danger mt-1"></span>
 						</div>
 						<div class="form-group">
-							<label asp-for="UserName" class="form-label"></label>
-							<input asp-for="UserName" class="form-control mb-1" placeholder="hgbaodev">
+							<label asp-for="UserName" class="form-label">Tên người dùng</label>
+							<input asp-for="UserName" class="form-control mb-1" placeholder="Tên người dùng">
 							<span asp-validation-for="UserName" class="d-block text-danger mt-1"></span>
 						</div>
 						<div class="form-group">
-							<label asp-for="EmailAddress" class="form-label"></label>
-							<input asp-for="EmailAddress" class="form-control mb-1" placeholder="abc@email.com">
+							<label asp-for="EmailAddress" class="form-label">Địa chỉ Gmail</label>
+							<input asp-for="EmailAddress" class="form-control mb-1" placeholder="abc@gmail.com">
 							<span asp-validation-for="EmailAddress" class="d-block text-danger mt-1"></span>
 						</div>
 						<div class="form-group">
-							<label asp-for="Password" class="form-label">Password</label>
+							<label asp-for="Password" class="form-label">Mật khẩu</label>
 							<input asp-for="Password" class="form-control mb-1" placeholder="************">
 							<span asp-validation-for="Password" class="d-block text-danger mt-1"></span>
 						</div>
 						<div class="form-group">
-							<label asp-for="ConfirmPassword" class="form-label">Comfirm password</label>
+							<label asp-for="ConfirmPassword" class="form-label">Xác nhận mật khẩu</label>
 							<input asp-for="ConfirmPassword" class="form-control mb-1" placeholder="************">
 							<span asp-validation-for="ConfirmPassword" class="d-block text-danger mt-1"></span>
 						</div>
-						<div class="text-center"><input type="submit" value="Register" class="btn_1 full-width"></div>
+						<div class="text-center"><input type="submit" value="Đăng ký" class="btn_1 full-width"></div>
 					</form>
 					<!-- /form_container -->
 				</div>

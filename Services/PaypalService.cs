@@ -35,13 +35,13 @@ namespace ShoeShop.Services
 
                 return new Item
                 {
-                    Name = $"{p.Name} - Size {p.Size} - Color {p.Color}",
-                    Currency = "USD",
+                    Name = "{p.Name} - Size {p.Size} - Color {p.Color}đ",
+                    Currency = "VND",
                     Price = v.Price.ToString("F2", CultureInfo.InvariantCulture),
                     Quantity = v.Quantity.ToString(),
                     Sku = "sku",
                     Tax = "0",
-                    Url = $"https://localhost:7107/products/{p.Slug}",
+                    Url = "https://localhost:7107/products/{p.Slug}đ",
                 };
 
             }).ToList();
@@ -64,7 +64,7 @@ namespace ShoeShop.Services
                         Amount = new Amount()
                         {
                             Total = (model.SubTotal + model.ShippingFee).ToString("0.00", CultureInfo.InvariantCulture),
-                            Currency = "USD",
+                            Currency = "VND",
                             Details = new AmountDetails
                             {
                                 Tax = "0.00", 

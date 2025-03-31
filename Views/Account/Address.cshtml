@@ -9,7 +9,7 @@
 }
 
 @{
-    ViewData["Title"] = "Address";
+    ViewData["Title"] = "Địa chỉ";
 }
 
 @section Styles {
@@ -43,13 +43,13 @@
                     </div>
                     <div class="list-group list-group-flush my-1">
                         <a href="/account/profile" class="list-group-item list-group-item-action d-flex align-items-center gap-1 bg-transparent">
-                            <i class="fa-solid fa-user fs-6 me-2"></i><span>Account information</span>
+                            <i class="fa-solid fa-user fs-6 me-2"></i><span>Thông tin tài khoản</span>
                         </a>
                         <a href="/account/orders" class="list-group-item list-group-item-action d-flex align-items-center gap-1 bg-transparent">
-                            <i class="fas fa-shopping-cart fs-6 me-2"></i><span>Order management</span>
+                            <i class="fas fa-shopping-cart fs-6 me-2"></i><span>Quản lý đơn hàng</span>
                         </a>
                         <a href="#" class="list-group-item list-group-item-action d-flex align-items-center gap-1 bg-transparent active">
-                            <i class="fas fa-address-card fs-6 me-2"></i><span>Address</span>
+                            <i class="fas fa-address-card fs-6 me-2"></i><span>Địa chỉ</span>
                         </a>
                     </div>
                 </div>
@@ -79,12 +79,12 @@
         <div class="modal-content">
             <form id="addAddressForm" onsubmit="return false;">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addAddressModalLabel">Address</h5>
+                    <h5 class="modal-title" id="addAddressModalLabel">Địa chỉ</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="fullName" class="form-label">Full Name</label>
+                        <label for="fullName" class="form-label">Tên đầy đủ</label>
                         <input type="text" class="form-control" id="fullName" name="fullName" required>
                     </div>
                     <div class="mb-3">
@@ -92,23 +92,23 @@
                         <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                     <div class="mb-3">
-                        <label for="phone" class="form-label">Phone</label>
+                        <label for="phone" class="form-label">Số điện thoại</label>
                         <input type="tel" class="form-control" id="phone" name="phone" required>
                     </div>
                     <div class="mb-3">
-                        <label for="address" class="form-label">Address</label>
+                        <label for="address" class="form-label">Địa chỉ</label>
                         <input type="text" class="form-control" id="address" name="address" required>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="default-address">
                         <label class="form-check-label" for="default-address">
-                            Default address
+                            Địa chỉ mặc định
                         </label>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary" id="btn-save">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary" id="btn-save">Lưu</button>
                 </div>
             </form>
         </div>
@@ -120,12 +120,12 @@
         <div class="modal-content">
             <form id="editAddressForm" onsubmit="return false;">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="editAddressModalLabel">Edit Address</h5>
+                    <h5 class="modal-title" id="editAddressModalLabel">Sửa địa chỉ</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="editFullName" class="form-label">Full Name</label>
+                        <label for="editFullName" class="form-label">Tên đầy đủ</label>
                         <input type="text" class="form-control" id="editFullName" name="editFullName" required>
                     </div>
                     <div class="mb-3">
@@ -133,23 +133,23 @@
                         <input type="email" class="form-control" id="editEmail" name="editEmail" required>
                     </div>
                     <div class="mb-3">
-                        <label for="editPhone" class="form-label">Phone</label>
+                        <label for="editPhone" class="form-label">Số điện thoại</label>
                         <input type="tel" class="form-control" id="editPhone" name="editPhone" required>
                     </div>
                     <div class="mb-3">
-                        <label for="editAddress" class="form-label">Address</label>
+                        <label for="editAddress" class="form-label">Địa Chỉ</label>
                         <input type="text" class="form-control" id="editAddress" name="editAddress" required>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="editIsDefault">
                         <label class="form-check-label" for="editIsDefault">
-                            Default address
+                            Địa chỉ mặc định
                         </label>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary" id="btn-save">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary" id="btn-save">Lưu</button>
                 </div>
             </form>
         </div>
@@ -225,13 +225,13 @@
                     }
                 },
                 messages: {
-                    fullName: "Please enter your full name",
+                    fullName: "Hãy điền tên đầy đủ",
                     email: {
-                        required: "Please enter your email address",
-                        email: "Please enter a valid email address"
+                        required: "Hãy nhập địa chỉ Email",
+                        email: "Vui lòng nhập địa chỉ email hợp lệ"
                     },
-                    phone: "Please enter your phone number",
-                    address: "Please enter your address"
+                    phone: "Vui lòng nhập số điện thoại của bạn",
+                    address: "Vui lòng nhập địa chỉ của bạn"
                 }
             });
 
@@ -334,12 +334,12 @@
             $(document).on("click", ".btn-delete", async function () {
                 let addressId = $(this).closest('.address-item').data("id");
                 let result = await Swal.fire({
-                    title: "Are you sure?",
-                    text: "Would you like to delete this address?",
+                    title: "Bạn có chắc không?",
+                    text: "Bạn có muốn xóa địa chỉ này không?",
                     icon: "warning",
                     showCancelButton: true,
-                    confirmButtonText: "Yes, I'm sure!",
-                    cancelButtonText: "Cancel"
+                    confirmButtonText: "Vâng, tôi chắc chắn!",
+                    cancelButtonText: "Hủy bỏ"
                 });
 
                 if (result.value) {
@@ -351,17 +351,17 @@
                         });
 
                         if (response) {
-                            Swal.fire("Deleted!", "Successfully deleted the address.", "success");
+                            Swal.fire("Đã xóa!", "Đã xóa địa chỉ thành công.", "success");
 
                             // Xóa địa chỉ khỏi mảng và render lại
                             addressesArray = addressesArray.filter(address => address.id !== addressId);
                             $(this).closest('.address-item').remove();
                         } else {
-                            Swal.fire("Error !", "Deletion of the address was not successful.", "error");
+                            Swal.fire("Lỗi !", "Việc xóa địa chỉ không thành công.", "error");
                         }
                     } catch (error) {
                         console.error("Error:", error);
-                        Swal.fire("Error !", "Deletion of the address was not successful.", "error");
+                        Swal.fire("Lỗi!", "Việc xóa địa chỉ không thành công.", "error");
                     }
                 }
             });

@@ -6,7 +6,7 @@ namespace ShoeShop.Hubs
 	{
 		public async Task SendOrder()
 		{
-			await Clients.All.SendAsync("ReceiveOrder");
+			await Clients.All.SendAsync("Nhận đơn hàng");
 		}
 	}
 }

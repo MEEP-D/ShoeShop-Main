@@ -18,8 +18,8 @@ namespace ShoeShop.Controllers
             _context = context;
             _userManager = userManager;
         }
-
-        public async Task<IActionResult> Index()
+		[Route("/blogs")]
+		public async Task<IActionResult> Index()
 		{
             if (_context.Blogs != null)
             {

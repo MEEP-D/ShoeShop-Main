@@ -21,17 +21,17 @@ namespace ShoeShop.Data.Seeder
                         new Address
                         {
                             FullName = "Nguyen Van A",
-                            Phone = "0387913347",
-                            Email = "transinh085@gmail.com",
-                            SpecificAddress = "205 Tran Hung Dao B, Phuong 10, Quan 5",
+                            Phone = "0374418254",
+                            Email = "abc@gmail.com",
+                            SpecificAddress = "Bac Tu Liem,Ha Noi, Ha Noi",
                             IsDefault = true
                         },
                         new Address
                         {
                             FullName = "Nguyen Van B",
-                            Phone = "0369765342",
-                            Email = "transinh342@gmail.com",
-                            SpecificAddress = "An Duc, Hoai An, Binh Dinh"
+                            Phone = "0374418253",
+                            Email = "123@gmail.com",
+                            SpecificAddress = "An Duc, Hoai Duc, Hoai Duc"
                         }
                     };
                     var newAdminUser = new AppUser()
@@ -59,8 +59,8 @@ namespace ShoeShop.Data.Seeder
 						new Address
 						{
 							FullName = "Nguyen Van A",
-							Phone = "0387913347",
-							Email = "hgba@gmail.com",
+							Phone = "03879133472",
+							Email = "duong@gmail.com",
 							SpecificAddress = "Tan Binh",
 							IsDefault = true
 						},
@@ -68,18 +68,18 @@ namespace ShoeShop.Data.Seeder
 						{
 							FullName = "Nguyen Van B",
 							Phone = "0369765342",
-							Email = "hga@gmail.com",
+							Email = "ducduong@gmail.com",
 							SpecificAddress = "An Duc, Hoai An, Binh Dinh"
 						}
 					};
 					var newAppUser = new AppUser()
                     {
-                        FullName = "Hoàng Gia Bảo",
-                        UserName = "hgbaodev",
-                        Email = "musicanime2501@gmail.com",
+                        FullName = "Trịnh Đức Dương",
+                        UserName = "Duong",
+                        Email = "musicanime2607@gmail.com",
                         EmailConfirmed = true,
                         PhoneNumber = "0123456789",
-                        ProfileImageUrl = "https://avatars.githubusercontent.com/u/120194990?v=4",
+                        ProfileImageUrl = "",
                         Status = true,
                         Gender = 0,
                         BirthDay = DateTime.Now,
@@ -89,17 +89,17 @@ namespace ShoeShop.Data.Seeder
                     await userManager.AddToRoleAsync(newAppUser, UserRoles.Admin);
                 }
 
-                var appUser1 = await userManager.FindByEmailAsync("andinh1443@gmail.com");
+                var appUser1 = await userManager.FindByEmailAsync("acduong4567@gmail.com");
                 if (appUser == null)
                 {
                     var newAppUser = new AppUser()
                     {
-                        FullName = "Đinh Ngọc Ân",
-                        UserName = "andinh1443",
-                        Email = "andinh1443@gmail.com",
+                        FullName = "Đức Dương",
+                        UserName = "Duong123",
+                        Email = "trinhducduong267@gmail.com",
                         EmailConfirmed = true,
                         PhoneNumber = "0123456789",
-                        ProfileImageUrl = "https://avatars.githubusercontent.com/u/120194990?v=4",
+                        ProfileImageUrl = "",
                         Status = true,
                         Gender = 0,
                         BirthDay = DateTime.Now,

@@ -4,38 +4,38 @@ using System.ComponentModel.DataAnnotations;
 
 public class CustomerViewModel
 {
-    [Display(Name = "FullName")]
-    [Required(ErrorMessage = "FullName is required")]
+    [Display(Name = "Tên đầy đủ")]
+    [Required(ErrorMessage = "Tên đầy đủ là bắt buộc")]
     public string FullName { get; set; }
 
     [Display(Name = "UserName")]
-    [Required(ErrorMessage = "UserName is required")]
+    [Required(ErrorMessage = "Tên là bắt buộc")]
     public string UserName { get; set; }
 
     [Display(Name = "Email")]
-    [Required(ErrorMessage = "Email is required")]
+    [Required(ErrorMessage = "Email là bắt buộc")]
     [EmailAddress(ErrorMessage = "Invalid Email Address")]
     public string Email { get; set; }
 
     [Display(Name = "Phone")]
-    [Required(ErrorMessage = "Phone is required")]
+    [Required(ErrorMessage = "SDT là bắt buộc")]
     public string PhoneNumber { get; set; }
 
     [Display(Name = "BirthDay")]
-    [Required(ErrorMessage = "BirthDay is required")]
+    [Required(ErrorMessage = "BirthDay là bắt buộc")]
     [DataType(DataType.Date)]
     [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
     public DateTime BirthDay { get; set; }
 
     [Display(Name = "Password")]
-    [Required(ErrorMessage = "Password is required")]
+    [Required(ErrorMessage = "Password là bắt buộc")]
     public string Password { get; set; }
 
     [Display(Name = "Gender")]
-    [Required(ErrorMessage = "Gender is required")]
+    [Required(ErrorMessage = "Gender là bắt buộc")]
     public int Gender { get; set; }
 
     [Display(Name = "Status")]
-    [Required(ErrorMessage = "Status is required")]
+    [Required(ErrorMessage = "Status là bắt buộc")]
     public bool Status { get; set; }
 }

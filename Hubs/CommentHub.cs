@@ -31,7 +31,7 @@ namespace ShoeShop.Hubs
 
 				if (latestComment != null)
 				{
-					await Clients.Group(productId.ToString()).SendAsync("ReceiveComment", latestComment);
+					await Clients.Group(productId.ToString()).SendAsync("Nhận xét", latestComment);
 				}
 			}
 		}

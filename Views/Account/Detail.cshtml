@@ -9,12 +9,12 @@
 }
 
 @{
-    ViewData["Title"] = "Orders";
+    ViewData["Title"] = "Đơn hàng";
 }
 
 @using ShoeShop.Data.Enum;
 @{
-    ViewData["Title"] = "Order detail";
+    ViewData["Title"] = "Chi tiết đơn hàng";
     var order = ViewBag.Order;
     var detail = order.Details;
     var address = order.Address;
@@ -30,8 +30,8 @@
     <div class="container magrin_30">
         <nav aria-label="breadcrumb" class="pt-3">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Orders</li>
+                <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Đơn hàng</li>
             </ol>
         </nav>
         <div class="row">
@@ -52,13 +52,13 @@
                     </div>
                     <div class="list-group list-group-flush my-1">
                         <a href="/account/profile" class="list-group-item list-group-item-action d-flex align-items-center gap-1 bg-transparent">
-                            <i class="fa-solid fa-user fs-6 me-2"></i><span>Account information</span>
+                            <i class="fa-solid fa-user fs-6 me-2"></i><span>Thông tin tài khoản</span>
                         </a>
                         <a href="#" class="list-group-item list-group-item-action d-flex align-items-center gap-1 bg-transparent active">
-                            <i class="fas fa-shopping-cart fs-6 me-2"></i><span>Order management</span>
+                            <i class="fas fa-shopping-cart fs-6 me-2"></i><span>Quản lý đơn hàng</span>
                         </a>
                         <a href="/account/address" class="list-group-item list-group-item-action d-flex align-items-center gap-1 bg-transparent">
-                            <i class="fas fa-address-card fs-6 me-2"></i><span>Address</span>
+                            <i class="fas fa-address-card fs-6 me-2"></i><span>Địa chỉ</span>
                         </a>
                     </div>
                 </div>
@@ -81,18 +81,18 @@
                                 <div class="alert alert-info">
                                     @(order.Description == "" ? "No description" : order.Description)
                                 </div>
-                                <p class="fs-5 fw-semibold">Products</p>
+                                <p class="fs-5 fw-semibold">Sản phẩm</p>
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-vcenter fs-sm">
                                         <thead>
                                             <tr>
                                                 <th class="text-center" style="width: 100px;">ID</th>
-                                                <th>Product Name</th>
-                                                <th class="text-center">Size</th>
-                                                <th>Color</th>
-                                                <th class="text-center">Qty</th>
-                                                <th class="text-end" style="width: 10%;">Unit Cost</th>
-                                                <th class="text-end" style="width: 10%;">Price</th>
+                                                <th>Tên sản phẩm</th>
+                                                <th class="text-center">Kích thước</th>
+                                                <th>Màu sắc</th>
+                                                <th class="text-center">Số lượng</th>
+                                                <th class="text-end" style="width: 10%;">Đơn giá</th>
+                                                <th class="text-end" style="width: 10%;">Giá</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -109,26 +109,26 @@
                                                 </tr>
                                             }
                                             <tr>
-                                                <td colspan="6" class="text-end"><strong>Total Price:</strong></td>
+                                                <td colspan="6" class="text-end"><strong>Tổng giá:</strong></td>
                                                 <td class="text-end">$@order.SubTotal</td>
                                             </tr>
                                             <tr>
-                                                <td colspan="6" class="text-end"><strong>Shipping Fee:</strong></td>
+                                                <td colspan="6" class="text-end"><strong>Giá vận chuyển:</strong></td>
                                                 <td class="text-end">$@order.ShippingFee</td>
                                             </tr>
                                             <tr>
-                                                <td colspan="6" class="text-end"><strong>Discount:</strong></td>
+                                                <td colspan="6" class="text-end"><strong>Giảm giá:</strong></td>
                                                 <td class="text-end">- $@order.Discount</td>
                                             </tr>
                                             @if (!string.IsNullOrEmpty(order.VoucherCode))
                                             {
                                                 <tr>
-                                                    <td colspan="6" class="text-end"><strong>Voucher Code:</strong></td>
+                                                    <td colspan="6" class="text-end"><strong>Mã giảm giá:</strong></td>
                                                     <td class="text-end">@order.VoucherCode</td>
                                                 </tr>
                                             }
                                             <tr>
-                                                <td colspan="6" class="text-end text-uppercase"><strong>Total Due:</strong></td>
+                                                <td colspan="6" class="text-end text-uppercase"><strong>Tổng tiền:</strong></td>
                                                 <td class="text-end"><strong>$@(order.ShippingFee + order.SubTotal - @order.Discount)</strong></td>
                                             </tr>
                                         </tbody>
@@ -141,22 +141,22 @@
                                             case OrderStatus.Confirmed:
                                                 <div class="d-flex align-items-center gap-2">
                                                     <i class="fa fa-check text-success fs-4"></i>
-                                                    <p class="mb-0 fs-6">ORDER WAS CONFIRMED</p>
+                                                    <p class="mb-0 fs-6">ĐƠN HÀNG ĐÃ ĐƯỢC XÁC NHẬN</p>
                                                 </div>
                                                 break;
 
                                             case OrderStatus.Unconfirmed:
                                                 <div class="d-flex align-items-center gap-2">
                                                     <i class="fa fa-times text-danger fs-4"></i>
-                                                    <p class="mb-0 fs-6">ORDER NOT CONFIRMED</p>
+                                                    <p class="mb-0 fs-6">ĐƠN HÀNG CHƯA ĐƯỢC XÁC NHẬN</p>
                                                 </div>
-                                                <button class="btn btn-danger" id="btn-canceled">Canceled</button>
+                                                <button class="btn btn-danger" id="btn-canceled">Đã hủy</button>
                                                 break;
 
                                             case OrderStatus.Canceled:
                                                 <div class="d-flex align-items-center gap-2">
                                                     <i class="fa fa-check text-danger fs-4"></i>
-                                                    <p class="mb-0 fs-6">ORDER WAS CANCELED</p>
+                                                    <p class="mb-0 fs-6">ĐƠN HÀNG ĐÃ BỊ HỦY</p>
                                                 </div>
                                                 break;
                                         }
@@ -173,19 +173,19 @@
                                         {
                                             <i class="fa fa-times text-danger fs-4"></i>
                                         }
-                                        <p class="mb-0 fs-6">PAYMENT</p>
+                                        <p class="mb-0 fs-6">Trạng thái thanh toán</p>
                                     </div>
                                     <div>
-                                        <p class="fs-sm mb-0">Payment method: @order.PaymentMethod</p>
+                                        <p class="fs-sm mb-0">Thanh toán: @order.PaymentMethod</p>
                                     </div>
                                 </div>
                                 <div class="py-3">
                                     <div class="d-flex align-items-center gap-2 mb-2">
                                         <i class="fa fa-check text-success fs-4"></i>
-                                        <p class="mb-0 fs-6">DELIVERY</p>
+                                        <p class="mb-0 fs-6">Vận chuyển</p>
                                     </div>
                                     <div>
-                                        <p class="fs-sm mb-0">Shipping method: @order.ShippingMethod</p>
+                                        <p class="fs-sm mb-0">Trạng thái vận chuyển: @order.ShippingMethod</p>
                                     </div>
                                 </div>
                             </div>
@@ -207,7 +207,7 @@
                         //Dashmix.helpers('jq-notify', { type: 'success', icon: 'fa fa-check me-1', message: 'Order confirmation successful!' });
                         $("#order-confirm-container").html(`<div class="d-flex align-items-center gap-2">
                             <i class="fa fa-check text-danger fs-4"></i>
-                            <p class="mb-0 fs-6">ORDER WAS CANCELED</p>
+                                    <p class="mb-0 fs-6">ĐƠN HÀNG ĐÃ BỊ HỦY</p>
                          </div>`);
                     } else {
                         //Dashmix.helpers('jq-notify', { type: 'danger', icon: 'fa fa-times me-1', message: 'Order confirmation failed!' });

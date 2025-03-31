@@ -18,7 +18,7 @@ namespace ShoeShop.Services
 		{
 			mailSettings = _mailSettings.Value;
 			logger = _logger;
-			logger.LogInformation("Create SendMailService");
+			logger.LogInformation("Tạo dịch vụ SendMail");
 		}
 
 		// Gửi email, theo nội dung trong mailContent

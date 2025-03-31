@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<ShoeShop.Models.Product>
 @{
-	ViewData["Title"] = "Products";
+	ViewData["Title"] = "Sản Phảm";
 }
 @section Styles {
 	<link href="~/css/listing.css" rel="stylesheet">
@@ -21,14 +21,14 @@
 			<div class="container">
 				<div class="breadcrumbs">
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li>Products</li>
+						<li><a href="#">Trang chủ</a></li>
+						<li>Sản Phẩm</li>
 					</ul>
 				</div>
-				<h1>Products</h1>
+				<h1>Sản Phẩm</h1>
 			</div>
 		</div>
-		<img src="~/img/bg_cat_shoes.jpg" class="img-fluid" alt="">
+		<img src="~/img/slide_home_3.jpg" class="img-fluid" alt="">
 	</div>
 	<!-- /top_banner -->
 	<div id="stick_here"></div>
@@ -38,9 +38,9 @@
 				<li>
 					<div class="sort_select">
 						<select name="sort" id="sort">
-							<option value="date" selected="selected">Sort by newness</option>
-							<option value="price">Sort by price: low to high</option>
-							<option value="price-desc">Sort by price: high to</option>
+							<option value="date" selected="selected">Sắp xếp theo độ mới</option>
+							<option value="price">Sắp xếp theo giá: thấp đến cao</option>
+							<option value="price-desc">Sắp xếp theo giá: cao đến thấp</option>
 						</select>
 					</div>
 				</li>
@@ -50,7 +50,7 @@
 				</li>
 				<li>
 					<a href="#0" class="open_filters">
-						<i class="ti-filter"></i><span>Filters</span>
+						<i class="ti-filter"></i><span>Lọc</span>
 					</a>
 				</li>
 			</ul>
@@ -65,7 +65,7 @@
 				<div class="filter_col">
 					<div class="inner_bt"><a href="#" class="open_filters"><i class="ti-close"></i></a></div>
 					<div class="filter_type version_2">
-						<h4><a href="#categories" data-bs-toggle="collapse" class="opened">Categories</a></h4>
+						<h4><a href="#categories" data-bs-toggle="collapse" class="opened">Danh Mục</a></h4>
 						<div class="collapse show" id="categories">
 							<ul>
 								@if (categories != null)
@@ -87,7 +87,7 @@
 					</div>
 					<!-- /filter_type -->
 					<div class="filter_type version_2">
-						<h4><a href="#colors" data-bs-toggle="collapse" class="opened">Colors</a></h4>
+						<h4><a href="#colors" data-bs-toggle="collapse" class="opened">Màu Sắc</a></h4>
 						<div class="collapse show" id="colors">
 							<ul>
 								@if (colors != null)
@@ -109,7 +109,7 @@
 					</div>
 					<!-- /filter_type -->
 					<div class="filter_type version_2">
-						<h4><a href="#lbrands" data-bs-toggle="collapse" class="closed">Brands</a></h4>
+						<h4><a href="#lbrands" data-bs-toggle="collapse" class="closed">Thương Hiệu</a></h4>
 						<div class="collapse" id="lbrands">
 							<ul>
 								@if (brands != null)
@@ -130,7 +130,7 @@
 					</div>
 					<!-- /filter_type -->
 					<div class="filter_type version_2">
-						<h4><a href="#sizes" data-bs-toggle="collapse" class="closed">Sizes</a></h4>
+						<h4><a href="#sizes" data-bs-toggle="collapse" class="closed">Kích Thước</a></h4>
 						<div class="collapse" id="sizes">
 							<ul>
 								@if (sizes != null)
@@ -151,7 +151,7 @@
 					</div>
 					<!-- /filter_type -->
 					<div class="filter_type version_2">
-						<h4><a href="#filter_4" data-bs-toggle="collapse" class="closed">Price</a></h4>
+						<h4><a href="#filter_4" data-bs-toggle="collapse" class="closed">Giá</a></h4>
 						<div class="collapse" id="filter_4">
 							<ul>
 								@if (priceRanges != null)
@@ -172,7 +172,7 @@
 					</div>
 					<!-- /filter_type -->
 					<div class="buttons">
-						<button id="reset" class="btn_1">Reset</button>
+						<button id="reset" class="btn_1">Đặt Lại</button>
 					</div>
 				</div>
 			</aside>

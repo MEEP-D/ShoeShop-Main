@@ -10,6 +10,45 @@
 }
 
 
+@keyframes marquee {
+    from {
+        transform: translateX(100vw); /* Bắt đầu từ mép phải màn hình */
+    }
+
+    to {
+        transform: translateX(-100%); /* Chạy qua mép trái */
+    }
+}
+.top_line.version_1.plus_select {
+    background-color: white; /* Màu nền trắng */
+    color: black; /* Màu chữ đen để dễ nhìn */
+    padding: 0px 0; /* Giữ bố cục đẹp hơn */
+    overflow: hidden;
+    position: relative;
+}
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #ffffff; /* Nền trắng */
+    padding: 2px 0;
+    white-space: nowrap;
+}
+
+.marquee-text {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    color: black; /* Đổi từ #black sang black */
+    animation: marquee 10s linear infinite !important; /* Đảm bảo animation luôn hoạt động */
+
+    will-change: transform; /* Giúp mượt hơn */
+
+}
+
+
+
+
 .form-control.error,.input-validation-error {
     border-color: #fae5dd !important;
     background-color: #fae5dd !important;
